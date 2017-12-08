@@ -104,6 +104,7 @@ func (g *GitDriver) Clone(dir, url string) (string, error) {
 		"git",
 		"clone",
 		"--depth", "1",
+		"--branch", g.Ref,
 		url,
 		rep)
 	cmd.Dir = par
